@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Magento\Sales\Model\ResourceModel\Order\Grid">
+        <arguments>
+            <argument name="columns" xsi:type="array">
+                <item name="coupon_code" xsi:type="string">sales_order.coupon_code</item>
+                <item name="discount_amount" xsi:type="string">sales_order.discount_amount</item>
+            </argument>
+        </arguments>
+    </virtualType>
+<!--    <type name="RANK\OrderGrid\Model\ResourceModel\Order\Grid\Collection">-->
+<!--        <arguments>-->
+<!--            <argument name="mainTable" xsi:type="string">sales_order_grid</argument>-->
+<!--            <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+<!--    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
+<!--        <arguments>-->
+<!--            <argument name="collections" xsi:type="array">-->
+<!--                <item name="sales_order_grid_data_source" xsi:type="string">RANK\OrderGrid\Model\ResourceModel\Order\Grid\Collection</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+<!--    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
+<!--        <plugin name="sales_order_grid_add_columns" type="RANK\OrderGrid\Plugin\DataProvider\CollectionFactory" sortOrder="1" disabled="false"/>-->
+<!--    </type>-->
+</config>
+

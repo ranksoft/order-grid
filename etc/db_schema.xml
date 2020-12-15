@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_order_grid">
+        <column xsi:type="varchar" name="coupon_code" nullable="true" length="50" comment="Coupon Code"/>
+        <column xsi:type="decimal" name="discount_amount" scale="4" precision="12" unsigned="false" nullable="false" default="0" comment="Discount Amount"/>
+        <index referenceId="SALES_ORDER_GRID_COUPON_CODE" indexType="btree">
+            <column name="coupon_code"/>
+        </index>
+        <index referenceId="SALES_ORDER_GRID_DISCOUNT_AMOUNT" indexType="btree">
+            <column name="discount_amount"/>
+        </index>
+    </table>
+</schema>
